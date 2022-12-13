@@ -3,22 +3,23 @@ import Nav from "./Components/Navbar";
 import "./Styles/index.css"
 
 import Card from "./Components/Card";
-
+import cardData from "./data"
 
 export default function App(){
+    const cardElements =cardData.map(card)
+    function card(detail){
+        return <Card 
+                    detail={detail}
+                />
+    } 
     return (
-        <div className="container">
+        <>
             <Nav />
-            <Card
-              img="https://runnersconnect.net/wp-content/uploads/2019/06/Katie-Zaferes-2-by-Tommy-Zaferes-e1560905773494.jpeg"
-              rating={5.0}
-              reviews = {6}
-              country="USA"
-              title="Life lessons with Katie Zaferes"
-              amount = {136}
-            />
-           
+            <div className="container">
+            {cardElements}
         </div>
+       
+    </>
         
     )
 }

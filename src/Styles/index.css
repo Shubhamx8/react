@@ -19,12 +19,17 @@
     max-width: 250px;
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
+    
     
 }
 .card--img{
+
     width: 100%;
     height: 300px;
     border-radius: 9px;
+    min-width: 100%;
+    object-fit: cover;
     
     
     
@@ -45,4 +50,9 @@
 .card > p{
     color: rgb(58, 55, 55);
     padding: 3px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
